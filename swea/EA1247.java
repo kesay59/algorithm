@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-//SW ExpertAcademy 1247 최적경로
+//SW Expert Academy 1247 최적경로
 public class EA1247 {
 	private static int[][] lut = new int[12][12];
 	private static int[][] dot = new int[12][2];
@@ -13,7 +13,6 @@ public class EA1247 {
 	private static int[] tmp = new int[12];
 	
 	private static void visit(int dp, int cur, int sum) {
-		if(sum > min) return;
 		if(dp == cLen + 1) {
 			if(min > sum + lut[cur][cLen+1]) {
 				min = sum + lut[cur][cLen+1];
