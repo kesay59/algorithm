@@ -53,6 +53,7 @@ public class BJ20436 {
 				rightHand[0] = tmp[1];
 				rightHand[1] = tmp[2];
 			}
+			timeSum++;
 		}
 		System.out.println(timeSum);
 	}
