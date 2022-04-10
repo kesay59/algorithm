@@ -10,5 +10,9 @@ bj : Baekjoon
 
 ea : SW Expert Academy
 
+kakao : kakao
+
+softeer : softeer.ai
+
 else : else
 
