@@ -18,7 +18,6 @@ const rl = readline.createInterface({
 const input = [];
 rl.on("line", function(line){
     input.push(line);
-    // rl.close();
 }).on("close", function(){
     solution(input);
     process.exit();
