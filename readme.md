@@ -1,18 +1,12 @@
 # Convention
 
-feat : Add Configuration
+BJ : Baekjoon
 
-fix : Change Configuration
+EA : SW Expert Academy
 
-docs : Document
+KAKAO : kakao
 
-bj : Baekjoon
-
-ea : SW Expert Academy
-
-kakao : kakao
-
-softeer : softeer.ai
+SOFTEER : softeer.ai
 
 else : else
 
