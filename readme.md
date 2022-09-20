@@ -1,5 +1,3 @@
-# Convention
-
 BJ : Baekjoon
 
 EA : SW Expert Academy
