@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 //BJ 2839 설탕 배달
-public class Main {
+public class BJ2839 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

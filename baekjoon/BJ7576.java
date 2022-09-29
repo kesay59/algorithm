@@ -6,7 +6,7 @@ import java.util.StringTokenizer;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Main {
+public class BJ7576 {
 	
 	private static int[][] map;
 	private static Queue<Point> que = new LinkedList<>();

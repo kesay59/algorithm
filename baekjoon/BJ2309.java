@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 //백준 2309 일곱난쟁이
-public class Main {
+public class BJ2309 {
 	private static int[] arr;
 	
 	public static void main(String[] args) {

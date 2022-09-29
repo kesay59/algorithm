@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.Map.Entry;
 
-public class Main {
+public class BJ5557 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int num = Integer.parseInt(br.readLine());

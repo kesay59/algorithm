@@ -1,59 +1,44 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-//백준 10942 팰린드롬?
 public class BJ10942 {
-
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int len = Integer.parseInt(br.readLine());
-		
-		ArrayList<Integer>[] adr = new ArrayList[100001];
-		int[] arr = new int[len + 1];
+		int N = Integer.parseInt(br.readLine());
+		int[] arr = new int[N];
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		for(int i = 1; i <= len; i++) {
-			arr[i] = Integer.parseInt(st.nextToken());
-			if(adr[arr[i]] == null) {
-				adr[arr[i]] = new ArrayList<Integer>();
-				adr[arr[i]].add(i);
-			} else {
-				adr[arr[i]].add(i);
+		for(int n = 0; n < N; n++) {
+			arr[n] = Integer.parseInt(st.nextToken());
+		}
+		boolean[][] dp = new boolean[N][N];
+		int sta, end;
+		for(int i = 0; i < N - 1; i++) {
+			sta = i;
+			end = i;
+			while(sta >= 0 && end < N) {
+				if(arr[sta] != arr[end]) break;
+				dp[sta][end] = true;
+				sta--;
+				end++;
+			}
+			sta = i;
+			end = i+1;
+			while(sta >= 0 && end < N) {
+				if(arr[sta] != arr[end]) break;
+				dp[sta][end] = true;
+				sta--;
+				end++;
 			}
 		}
-		
-		
-		int[][] mid = new int[2][len + 1];
-		for(int i = 1; i <= 100000; i++) {
-			if(adr[i] == null) continue;
-			for(int a = 0; a < adr[i].size(); a++) {
-				next : for(int b = a+1; b < adr[i].size(); b++) {
-					int sn = adr[i].get(a);
-					int en = adr[i].get(b);
-					int bwl = en - sn + 1;
-					if(mid[bwl % 2][en - bwl / 2] >= bwl) continue;
-					for(int c = 0; c <= bwl / 2; c++) 
-						if(arr[sn++] != arr[en--]) continue next;
-					mid[bwl % 2][sn-1] = bwl;
-				}
-			}
-		}
-		
-		int odn = Integer.parseInt(br.readLine());
-		for(int od = 0; od < odn; od++) {
+		dp[N-1][N-1] = true;
+		int T = Integer.parseInt(br.readLine());
+		StringBuilder stb = new StringBuilder();
+		for(int t = 0; t < T; t++) {
 			st = new StringTokenizer(br.readLine());
-			int sn = Integer.parseInt(st.nextToken());
-			int en = Integer.parseInt(st.nextToken());
-			int bwl = en - sn + 1;
-			if(bwl == 1) {
-				System.out.println(1);
-				continue;
-			}
-			if(mid[bwl % 2][en - bwl / 2] < bwl) System.out.println(0);
-			else System.out.println(1);
+			stb.append(dp[Integer.parseInt(st.nextToken()) - 1][Integer.parseInt(st.nextToken()) - 1] ? 1 : 0).append('\n');
 		}
+		System.out.print(stb.toString());
 	}
-
 }

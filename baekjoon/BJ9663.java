@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 //백준 9663 n-queen
-public class Main {
+public class BJ9663 {
 
 	static int len;
 	static int[][] vis;
