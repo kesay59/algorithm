@@ -4,7 +4,7 @@ EA : SW Expert Academy
 
 KAKAO : kakao
 
-PROG : programmers
+PRG : programmers
 
 SOFTEER : softeer.ai
 
